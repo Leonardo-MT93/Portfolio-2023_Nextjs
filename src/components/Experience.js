@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import {motion, useScroll} from 'framer-motion'
 import LiIcon from './LiIcon'
+import { useIntl } from 'react-intl'
 
 
 const Details = ({position, company, companyLink, time, address, work}) => {
@@ -22,6 +23,11 @@ const Details = ({position, company, companyLink, time, address, work}) => {
     </li>
 }
 const Experience = () => {
+    const intl = useIntl();
+  const title = intl.formatMessage({id:"experience.title"});
+  const expFree = intl.formatMessage({id:"exp.free"});
+  const dhlTitle = intl.formatMessage({id:"exp.dhl.title"});
+  const dhlDetail = intl.formatMessage({id:"exp.dhl.detail"});
     const ref = useRef(null);
     const {scrollYProgress} = useScroll(
         {
@@ -32,7 +38,7 @@ const Experience = () => {
   return (
     <div className='my-64'>
         <h2 className='font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16'>
-            Experience
+            {title}
         </h2>
         <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] md:w-full '>
             <motion.div
@@ -42,6 +48,18 @@ const Experience = () => {
             <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
                 
                     <Details 
+                    position='Freelancer' company='Leonify'
+                    companyLink="https://www.google.com"
+                    time='2023-Present' address='Buenos Aires, AR'
+                    work={expFree}
+                    />
+                     <Details 
+                    position={dhlTitle} company='DHL Express S.A.'
+                    companyLink="https://www.dhl.com/ar-es/home.html"
+                    time='2018-Present' address='Buenos Aires, AR'
+                    work={dhlDetail}
+                    />
+                     {/* <Details 
                     position='Software Engineer' company='Google'
                     companyLink="www.google.com"
                     time='2022-Present' address='Mountain View, CA'
@@ -64,23 +82,7 @@ const Experience = () => {
                     work="Worked on a team responsible for developing new features for Google's 
                     search engine, including improving the accuracy and relevance of search results and 
                     developing new tools for data analysis and visualization."
-                    />
-                     <Details 
-                    position='Software Engineer' company='Google'
-                    companyLink="www.google.com"
-                    time='2022-Present' address='Mountain View, CA'
-                    work="Worked on a team responsible for developing new features for Google's 
-                    search engine, including improving the accuracy and relevance of search results and 
-                    developing new tools for data analysis and visualization."
-                    />
-                     <Details 
-                    position='Software Engineer' company='Google'
-                    companyLink="www.google.com"
-                    time='2022-Present' address='Mountain View, CA'
-                    work="Worked on a team responsible for developing new features for Google's 
-                    search engine, including improving the accuracy and relevance of search results and 
-                    developing new tools for data analysis and visualization."
-                    />
+                    /> */}
                 
             </ul>
         </div>

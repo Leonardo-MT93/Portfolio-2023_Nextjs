@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useIntl } from "react-intl";
 
 const Skill = ({ name, x, y }) => {
   return (
@@ -18,9 +19,11 @@ const Skill = ({ name, x, y }) => {
   );
 };
 const Skills = () => {
+  const intl = useIntl();
+  const title = intl.formatMessage({id:"skills.title"});
   return (
     <>
-      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">Skills</h2>
+      <h2 className="font-bold text-8xl mt-64 w-full text-center md:text-6xl md:mt-32">{title}</h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark  
       lg:h-[80vh] sm:h-[60vh] xs:h-[50vh]
       lg:bg-circularLightLg lg:dark:bg-circularDarkLg
@@ -41,8 +44,8 @@ const Skills = () => {
         <Skill name="React" x="0vw" y="13vw" />
         <Skill name="NextJS" x="-20vw" y="-15vw" />
         <Skill name="NodeJS" x="12vw" y="-12vw" />
-        <Skill name="Web Design" x="34vw" y="-5vw" />
-        <Skill name="Firebase" x="-25vw" y="16vw" />
+        <Skill name="NextJs" x="34vw" y="-5vw" />
+        <Skill name="Docker" x="-25vw" y="16vw" />
         <Skill name="Github" x="0vw" y="-21vw" />
         <Skill name="TailwindCSS" x="18vw" y="16vw" />
       </div>

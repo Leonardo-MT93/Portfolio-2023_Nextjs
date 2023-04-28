@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
 import LiIcon from "./LiIcon";
+import { useIntl } from "react-intl";
 
 const Details = ({ type, time, place, info }) => {
   const ref = useRef(null);
@@ -25,6 +26,14 @@ const Details = ({ type, time, place, info }) => {
   );
 };
 const Education = () => {
+  const intl = useIntl();
+  const title = intl.formatMessage({id:"education.title"});
+  const sub1 = intl.formatMessage({id:"edu.title1"});
+  const info1 = intl.formatMessage({id:"edu.info1"});
+  const sub2 = intl.formatMessage({id:"edu.title2"});
+  const info2 = intl.formatMessage({id:"edu.info2"});
+  const sub3 = intl.formatMessage({id:"edu.title3"});
+  const info3 = intl.formatMessage({id:"edu.info3"});
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -32,7 +41,7 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">Education</h2>
+      <h2 className="font-bold text-8xl mb-32 w-full text-center md:text-6xl xs:text-4xl md:mb-16">{title}</h2>
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full ">
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -41,25 +50,22 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-                    Intelligence."
+            type={sub1}
+            time="2021-2023"
+            place="Facultad Regional Avellaneda (UTN)"
+            info={info1}
           />
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-                    Intelligence."
+            type={sub2}
+            time="2022-2023"
+            place="Greenwood Institute"
+            info={info2}
           />
           <Details
-            type="Bachelor Of Science In Computer Science"
-            time="2016-2020"
-            place="Massachusetts Institute Of Technology (MIT)"
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial 
-                    Intelligence."
+            type={sub3}
+            time="2022-2022"
+            place="ORACLE NEXT EDUCATION"
+            info={info3}
           />
 
         </ul>

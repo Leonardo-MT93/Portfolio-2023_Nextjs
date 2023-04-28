@@ -13,9 +13,11 @@ import {
 } from "./Icons";
 import { motion } from "framer-motion";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import { useIntl } from "react-intl";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
+  
   return (
     <Link href={href} className={`${className} relative group`}>
       {title}
@@ -55,6 +57,12 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 };
 
 const NavBar = () => {
+  const {locales} = useRouter();
+  const intl = useIntl();
+  const navHome = intl.formatMessage({id:"navbar.home"});
+  const navAbout = intl.formatMessage({id:"navbar.about"});
+  const navProject = intl.formatMessage({id:"navbar.project"});
+  const navContact = intl.formatMessage({id:"navbar.contact"});
 
   const [mode, setMode] = useThemeSwitcher();
   const [isOpen, setIsOpen] = useState(false);
@@ -72,10 +80,10 @@ const NavBar = () => {
     </button>
       <div className="w-full flex justify-between items-center lg:hidden">
       <nav>
-        <CustomLink href="/" title="Home" className="mr-4" />
-        <CustomLink href="/about" title="About" className="mx-4" />
-        <CustomLink href="/project" title="Projects" className="mx-4" />
-        <CustomLink href="/contact" title="Contact" className="ml-4" />
+        <CustomLink href="/" title={navHome} className="mr-4" />
+        <CustomLink href="/about" title={navAbout} className="mx-4" />
+        <CustomLink href="/project" title={navProject} className="mx-4" />
+        <CustomLink href="/contact" title={navContact} className="ml-4" />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">
@@ -124,6 +132,13 @@ const NavBar = () => {
         >
           <DribbbleIcon />
         </motion.a>
+{/* BOTONES PARA CAMBIO DE IDIOMA */}
+<div className="flex p-1 mx-1">
+  {[...locales].sort().map((locale)=> (
+    <Link key={locale} href='/' locale={locale} className="flex p-1 mx-1">{locale}</Link>
+  ))}
+</div>
+
         <button onClick={() => setMode(mode==="light" ? "dark" : "light")}
         className={`ml-3 flex items-center justify-center rounded-full p-1
         ${mode === 'light' ? "bg-dark text-light" : "bg-light text-dark"}
@@ -147,10 +162,10 @@ className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed to
       bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32
       ">
       <nav className="flex items-center flex-col justify-center">
-        <CustomMobileLink href="/" title="Home" className=""  toggle={handleClick} />
-        <CustomMobileLink href="/about" title="About" className=""  toggle={handleClick} />
-        <CustomMobileLink href="/project" title="Projects" className=""  toggle={handleClick} />
-        <CustomMobileLink href="/articles" title="Articles" className=""  toggle={handleClick} />
+        <CustomMobileLink href="/" title={navHome} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/about" title={navAbout} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/project" title={navProject} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/contact" title={navContact} className=""  toggle={handleClick} />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap mt-2">
@@ -199,6 +214,13 @@ className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed to
         >
           <DribbbleIcon />
         </motion.a>
+        {/* BOTONES PARA CAMBIO DE IDIOMA */}
+<div className="flex p-1 mx-1">
+  {[...locales].sort().map((locale)=> (
+    <Link key={locale} href='/' locale={locale} className="flex p-1 mx-1">{locale}</Link>
+  ))}
+</div>
+
         <button onClick={() => setMode(mode==="light" ? "dark" : "light")}
         className={`ml-3 flex items-center justify-center rounded-full p-1
         ${mode === 'light' ? "bg-dark text-light" : "bg-light text-dark"}
