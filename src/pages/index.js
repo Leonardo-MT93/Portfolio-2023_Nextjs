@@ -1,13 +1,12 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profilePic from "../../public/images/profile/lt.png";
+import profilePic from "../../public/images/profile/Developer.png";
 import AnimatedText from "@/components/AnimatedText";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
 import TransitionEffect from "@/components/TransitionEffect";
-import { FormattedMessage, useIntl } from "react-intl";
-import { useRouter } from "next/router";
+import { useIntl } from "react-intl";
 
 export default function Home({dir}) {
 
@@ -50,7 +49,7 @@ export default function Home({dir}) {
                 "
                 download={true}
                 >{btnResume} 
-                <LinkArrow className={"w-4 ml-1"}/>
+                <LinkArrow className={"w-5 ml-1"}/>
                 </Link>
                 {/* <Link href="mailto:leonardotolaba.20@gmail.com" target={"_blank"} 
                 className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base">Contact</Link> */}

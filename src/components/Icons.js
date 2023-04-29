@@ -447,7 +447,7 @@ export const LinkArrow = ({ className, ...rest }) => (
     width={24}
     height={24}
     viewBox="0 0 24 24"
-    className={`w-full h-auto ${className}`}
+    className={`w-5 h-auto ${className}`}
     {...rest}
   >
     <path fill="none" d="M0 0h24v24H0z" />
@@ -461,4 +461,180 @@ export const LinkArrow = ({ className, ...rest }) => (
     />
   </svg>
 );
+
+export const GmailIcon = ({className, ...rest}) => (
+  <svg
+  xmlns="http://www.w3.org/2000/svg"
+  xmlSpace="preserve"
+  width={256}
+  height={256}
+  {...rest}
+  className={`w-full h-auto ${className}`}
+>
+  <g
+    style={{
+      stroke: "none",
+      strokeWidth: 0,
+      strokeDasharray: "none",
+      strokeLinecap: "butt",
+      strokeLinejoin: "miter",
+      strokeMiterlimit: 10,
+      fill: "none",
+      fillRule: "nonzero",
+      opacity: 1,
+    }}
+  >
+    <path
+      d="M84.261 79.141H5.628c-3.049 0-5.617-2.487-5.617-5.617V16.716c0-3.049 2.487-5.617 5.617-5.617h78.633c3.049 0 5.617 2.487 5.617 5.617v56.808a5.582 5.582 0 0 1-5.617 5.617z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#e3e3e3",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="m11.24 79.14 33.63-26.96.23-1.52L11.24 25.7z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d0d0d0",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="m80.8 79.15-20.95-.01-48.61-49.32V25.7L45.1 50.66l35.18-25.32z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#bbb",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="m44.87 52.18.23-1.52L11.24 25.7v4.12L38.4 57.37z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#b3b3b3",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M5.628 79.141a5.582 5.582 0 0 1-5.617-5.617V16.636c0-3.129 2.487-3.691 5.617-3.691s5.617.642 5.617 3.691v62.505H5.628z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d54b3d",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M5.628 13.747c4.012 0 4.814 1.204 4.814 2.889v61.703H5.628a4.828 4.828 0 0 1-4.814-4.814V16.636c0-1.765.803-2.889 4.814-2.889zm0-.802c-3.129 0-5.617.642-5.617 3.691v56.889a5.582 5.582 0 0 0 5.617 5.617h5.617V16.636c0-3.129-2.487-3.691-5.617-3.691z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d72b27",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M84.261 79.141h-5.617V16.476c0-3.129 2.487-3.53 5.617-3.53 3.129 0 5.617.401 5.617 3.53v57.129c0 3.049-2.487 5.536-5.617 5.536z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d54b3d",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M84.261 13.747c3.611 0 4.814.722 4.814 2.728v57.129a4.828 4.828 0 0 1-4.814 4.814h-4.814V16.476c0-2.087 1.204-2.729 4.814-2.729zm0-.802c-3.129 0-5.617.401-5.617 3.53v62.746h5.617a5.582 5.582 0 0 0 5.617-5.617V16.476c0-3.13-2.487-3.531-5.617-3.531z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d72b27",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M44.865 52.101 2.419 21.29c-2.487-1.845-3.21-5.376-1.364-7.863s5.456-3.049 8.024-1.204L44.945 38.3l36.107-26.398c2.487-1.845 6.018-1.284 7.863 1.284 1.845 2.487 1.284 6.018-1.284 7.863L44.865 52.101z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d54b3d",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+    <path
+      d="M84.261 11.581c1.525 0 2.969.722 3.932 2.006 1.525 2.166 1.043 5.135-1.043 6.74L44.865 51.138 2.9 20.648c-2.166-1.605-2.728-4.654-1.204-6.74.883-1.204 2.407-2.006 4.012-2.006 1.043 0 2.086.321 2.889.963l35.786 25.997.481.321.481-.321 36.027-26.398c.883-.562 1.846-.883 2.889-.883zm0-.802c-1.123 0-2.327.321-3.29 1.043L44.865 38.22 8.998 12.143c-.962-.722-2.166-1.043-3.37-1.043-1.765 0-3.53.802-4.654 2.327-1.765 2.487-1.043 6.018 1.444 7.863l42.446 30.892L87.55 21.05c2.487-1.845 3.049-5.296 1.284-7.863-1.122-1.606-2.807-2.408-4.573-2.408z"
+      style={{
+        stroke: "none",
+        strokeWidth: 1,
+        strokeDasharray: "none",
+        strokeLinecap: "butt",
+        strokeLinejoin: "miter",
+        strokeMiterlimit: 10,
+        fill: "#d72b27",
+        fillRule: "nonzero",
+        opacity: 1,
+      }}
+      transform="matrix(2.81 0 0 2.81 1.407 1.407)"
+    />
+  </g>
+</svg>
+)
 

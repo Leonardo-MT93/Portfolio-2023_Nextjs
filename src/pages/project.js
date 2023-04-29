@@ -5,14 +5,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project0 from '../../public/images/projects/metaversus.webp'
+import project1 from "../../public/images/projects/HotelAlura.webp";
+import project2 from '../../public/images/projects/openai.webp'
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useIntl } from "react-intl";
 
 const FramerImage = motion(Image);
 
-const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
+const FeaturedProject = ({ type, title, summary, img, link, githubLink, btnMain }) => {
   return (
     <article className="w-full flex items-center justify-between rounded-br-2xl rounded-3xl border border-solid border-dark bg-light shadow-2xl p-12 relative   dark:bg-dark dark:border-light
     lg:flex-col lg:p-8 xs:rounded-2xl xs:rounded-br-3xl xs:p-4
@@ -52,7 +54,7 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
             className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark
             sm:px-4 sm:text-base"
           >
-            Visit Project
+            {btnMain}
           </Link>
         </div>
       </div>
@@ -60,7 +62,7 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink }) => {
   );
 };
 
-const Project = ({ title, type, img, link, githubLink }) => {
+const Project = ({ title, type, img, link, githubLink, btnSub }) => {
   return (
     <article className="w-full flex flex-col items justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light
     xs:p-4">
@@ -90,7 +92,7 @@ const Project = ({ title, type, img, link, githubLink }) => {
             target="_blank"
             className=" text-lg font-semibold underline md:text-base"
           >
-            Visit
+            {btnSub}
           </Link>
           <Link href={githubLink} target="_blank" className="w-8 md:w-6">
             <GithubIcon />
@@ -105,6 +107,12 @@ const project = () => {
   const intl = useIntl();
   const title = intl.formatMessage({id:"project.title"});
   const mainTitle = intl.formatMessage({id:"project.main"});
+  const btnMain = intl.formatMessage({id:"project.btn.main"});
+  const btnSub = intl.formatMessage({id:"project.btn.sub"});
+  const mainTitleProject = intl.formatMessage({id:"pjt1.title"});
+  const mainDesc = intl.formatMessage({id:"pjt1.desc"})
+  const title2 = intl.formatMessage({id:"pjt2.title"});
+  const title3 = intl.formatMessage({id:"pjt3.title"});
   return (
     <>
       <Head>
@@ -121,41 +129,42 @@ const project = () => {
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 xs:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                        local currency."
-                link="/"
-                type="Featured Project"
-                img={project1}
-                githubLink="/"
+                title={mainTitleProject}
+                summary={mainDesc}
+                link="https://metaversus-next13-ten.vercel.app/"
+                type="NextJS 13 + Framer Motion"
+                img={project0}
+                githubLink="https://github.com/Leonardo-MT93/Metaversus_Next13"
+                btnMain={btnMain}
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title={title2}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="/"
-                type="Featured Project"
+                link="https://vimeo.com/772893200"
+                type="Java"
                 img={project1}
-                githubLink="/"
+                githubLink="https://github.com/Leonardo-MT93/Hotel-Alura---OracleOne"
+                btnSub={btnSub}
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                title="Crypto Screener Application"
+                title={title3}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="/"
-                type="Featured Project"
-                img={project1}
-                githubLink="/"
+                link="https://imagegenerator-ia-lmt.tech/"
+                type="React + OpenAI API"
+                img={project2}
+                githubLink="https://github.com/Leonardo-MT93/IA_ImageGenerator"
+                btnSub={btnSub}
               />
             </div>
-            <div className="col-span-12">
+            {/* <div className="col-span-12">
               <FeaturedProject
                 title="Crypto Screener Application"
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -163,11 +172,23 @@ const project = () => {
                         local currency."
                 link="/"
                 type="Featured Project"
-                img={project1}
+                img={project3}
                 githubLink="/"
               />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
+            </div> */}
+            {/* <div className="col-span-6 sm:col-span-12">
+              <Project
+                title="Crypto Screener Application"
+                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
+                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
+                        local currency."
+                link="/"
+                type="Featured Project"
+                img={project4}
+                githubLink="/"
+              />
+            </div> */}
+            {/* <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
@@ -178,19 +199,7 @@ const project = () => {
                 img={project1}
                 githubLink="/"
               />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                        local currency."
-                link="/"
-                type="Featured Project"
-                img={project1}
-                githubLink="/"
-              />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

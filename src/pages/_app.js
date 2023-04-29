@@ -46,11 +46,12 @@ export default function App({ Component, pageProps }) {
           <IntlProvider locale={locale} messages={messages[locale]}>
           <NavBar />
           <Component key={router.asPath} {...pageProps} dir={getDirection(locale)}/>
+          <Footer />
           </IntlProvider>
          
         </AnimatePresence>
 
-        <Footer />
+        
       </main>
     </>
   );
