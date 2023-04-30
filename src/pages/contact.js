@@ -4,7 +4,7 @@ import Head from 'next/head'
 import React from 'react'
 import { useIntl } from 'react-intl';
 
-const contact = () => {
+const Contact = () => {
   const intl = useIntl();
   const title = intl.formatMessage({id:"contact.title"});
   return (
@@ -19,4 +19,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

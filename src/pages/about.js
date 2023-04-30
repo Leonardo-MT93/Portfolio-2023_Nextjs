@@ -9,7 +9,7 @@ import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
-import { useIntl } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
 
 const AnimatedNumbers = ({value}) => {
 
@@ -37,7 +37,7 @@ const AnimatedNumbers = ({value}) => {
     return <span ref={ref}></span>
 }
 
-const about = () => {
+const About = () => {
 
   const intl = useIntl();
   const title = intl.formatMessage({id:"about.title"});
@@ -111,4 +111,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

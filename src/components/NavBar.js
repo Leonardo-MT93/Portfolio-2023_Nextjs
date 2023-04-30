@@ -81,9 +81,9 @@ const NavBar = () => {
       <div className="w-full flex justify-between items-center lg:hidden">
       <nav>
         <CustomLink href="/" title={navHome} className="mr-4" />
-        <CustomLink href="/about" title={navAbout} className="mx-4" />
-        <CustomLink href="/project" title={navProject} className="mx-4" />
-        <CustomLink href="/contact" title={navContact} className="ml-4" />
+        <CustomLink href="/About" title={navAbout} className="mx-4" />
+        <CustomLink href="/Project" title={navProject} className="mx-4" />
+        <CustomLink href="/Contact" title={navContact} className="ml-4" />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">
@@ -164,9 +164,9 @@ className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed to
       ">
       <nav className="flex items-center flex-col justify-center">
         <CustomMobileLink href="/" title={navHome} className=""  toggle={handleClick} />
-        <CustomMobileLink href="/about" title={navAbout} className=""  toggle={handleClick} />
-        <CustomMobileLink href="/project" title={navProject} className=""  toggle={handleClick} />
-        <CustomMobileLink href="/contact" title={navContact} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/About" title={navAbout} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/Project" title={navProject} className=""  toggle={handleClick} />
+        <CustomMobileLink href="/Contact" title={navContact} className=""  toggle={handleClick} />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap mt-2">

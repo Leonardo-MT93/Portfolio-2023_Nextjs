@@ -62,7 +62,7 @@ const FeaturedProject = ({ type, title, summary, img, link, githubLink, btnMain 
   );
 };
 
-const Project = ({ title, type, img, link, githubLink, btnSub }) => {
+const ProjectMin = ({ title, type, img, link, githubLink, btnSub }) => {
   return (
     <article className="w-full flex flex-col items justify-center rounded-2xl border border-solid border-dark bg-light p-6 relative dark:bg-dark dark:border-light
     xs:p-4">
@@ -103,7 +103,7 @@ const Project = ({ title, type, img, link, githubLink, btnSub }) => {
   );
 };
 
-const project = () => {
+const Project = () => {
   const intl = useIntl();
   const title = intl.formatMessage({id:"project.title"});
   const mainTitle = intl.formatMessage({id:"project.main"});
@@ -139,7 +139,7 @@ const project = () => {
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
-              <Project
+              <ProjectMin
                 title={title2}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
@@ -152,7 +152,7 @@ const project = () => {
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
-              <Project
+              <ProjectMin
                 title={title3}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
@@ -207,4 +207,4 @@ const project = () => {
   );
 };
 
-export default project;
+export default Project;
