@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useRef, useEffect } from "react";
-import profilePic from "../../public/images/profile/about.png";
+import profilePic from "../../public/images/profile/about.webp";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
@@ -79,9 +79,8 @@ const About = () => {
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem]  bg-dark dark:bg-light " />
               <Image
                 src={profilePic}
-                alt="LeoTolaba"
-                className="w-full h-auto rounded-2xl 
-                "
+                alt="LeoTolaba foto"
+                className="w-full h-auto rounded-2xl"
                 priority
                 sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
