@@ -7,7 +7,10 @@ import Link from "next/link";
 import React from "react";
 import project0 from '../../public/images/projects/metaversus.webp'
 import project1 from "../../public/images/projects/HotelAlura.webp";
-import project2 from '../../public/images/projects/openai.webp'
+import project2 from '../../public/images/projects/proyecto-journal.webp'
+import project3 from '../../public/images/projects/proyecto-car.webp'
+import project4 from "../../public/images/projects/proyecto-calendar.webp";
+import project5 from '../../public/images/projects/proyecto-cuchita.webp'
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useIntl } from "react-intl";
@@ -113,6 +116,10 @@ const Project = () => {
   const mainDesc = intl.formatMessage({id:"pjt1.desc"})
   const title2 = intl.formatMessage({id:"pjt2.title"});
   const title3 = intl.formatMessage({id:"pjt3.title"});
+  const mainTitleProject2 = intl.formatMessage({id:"pjt4.title"});
+  const mainDesc2 = intl.formatMessage({id:"pjt4.desc"})
+  const title5 = intl.formatMessage({id:"pjt5.title"});
+  const title6 = intl.formatMessage({id:"pjt6.title"});
   return (
     <>
       <Head>
@@ -145,7 +152,7 @@ const Project = () => {
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
                 link="https://vimeo.com/772893200"
-                type="Java"
+                type="Java + MySQL + POO"
                 img={project1}
                 githubLink="https://github.com/Leonardo-MT93/Hotel-Alura---OracleOne"
                 btnSub={btnSub}
@@ -157,49 +164,50 @@ const Project = () => {
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="https://imagegenerator-ia-lmt.tech/"
-                type="React + OpenAI API"
+                link="https://journal-app-23.netlify.app/"
+                type="React + Firebase/Firestore"
                 img={project2}
-                githubLink="https://github.com/Leonardo-MT93/IA_ImageGenerator"
+                githubLink="https://github.com/Leonardo-MT93/JournalApp"
                 btnSub={btnSub}
               />
             </div>
-            {/* <div className="col-span-12">
+            <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
-                        It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
-                        local currency."
-                link="/"
-                type="Featured Project"
+                title={mainTitleProject2}
+                summary={mainDesc2}
+                link="https://car-hub-nextjs13-app-leonardo-mt93.vercel.app/"
+                type="NextJS 13 + Typescript + RapidAPI"
                 img={project3}
-                githubLink="/"
+                githubLink="https://github.com/Leonardo-MT93/CarHub-Nextjs13-App"
+                btnMain={btnMain}
               />
-            </div> */}
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <ProjectMin
+                title={title5}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="/"
-                type="Featured Project"
+                link="https://calendarapp-leonify.netlify.app/"
+                type="MERN Stack + Redux"
                 img={project4}
-                githubLink="/"
+                githubLink="https://github.com/Leonardo-MT93/CalendarApp"
+                btnSub={btnSub}
               />
-            </div> */}
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
+            </div>
+            <div className="col-span-6 sm:col-span-12">
+              <ProjectMin
+                title={title6}
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="/"
-                type="Featured Project"
-                img={project1}
-                githubLink="/"
+                link="https://portfolio-2023-nextjs.vercel.app/"
+                type="🚀Proximamente..."
+                img={project5}
+                githubLink="https://github.com/Leonardo-MT93/"
+                btnSub={btnSub}
               />
-            </div> */}
+            </div>
           </div>
         </Layout>
       </main>
