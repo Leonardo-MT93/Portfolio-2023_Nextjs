@@ -197,24 +197,6 @@ className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed to
         >
           <TwitterIcon />
         </motion.a>
-        {/* <motion.a
-          href="/https://pinterest.com"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 mx-3 bg-light rounded-full sm:mx-1"
-        >
-          <PinterestIcon />
-        </motion.a>
-        <motion.a
-          href="/https://dribble.com"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3 sm:mx-1"
-        >
-          <DribbbleIcon />
-        </motion.a> */}
         {/* BOTONES PARA CAMBIO DE IDIOMA */}
 <div className="flex p-1 mx-1">
   {[...locales].sort().map((locale)=> (
