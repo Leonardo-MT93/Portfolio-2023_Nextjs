@@ -30,7 +30,6 @@ const ContactForm = () => {
     }}
     validate={(valores)=>{
         let errores = {};
-        console.log(locale)
         if(locale === 'es'){
             
             if(!valores.user_name){

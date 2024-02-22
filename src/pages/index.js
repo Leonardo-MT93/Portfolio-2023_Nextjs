@@ -52,8 +52,6 @@ export default function Home({dir}) {
                 >{btnResume} 
                 <LinkArrow className={"w-5 ml-1"}/>
                 </Link>
-                {/* <Link href="mailto:leonardotolaba.20@gmail.com" target={"_blank"} 
-                className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light md:text-base">Contact</Link> */}
               </div>
             </div>
           </div>

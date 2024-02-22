@@ -10,7 +10,7 @@ import project1 from "../../public/images/projects/HotelAlura.webp";
 import project2 from '../../public/images/projects/proyecto-journal.webp'
 import project3 from '../../public/images/projects/proyecto-car.webp'
 import project4 from "../../public/images/projects/proyecto-calendar.webp";
-import project5 from '../../public/images/projects/proyecto-cuchita.webp'
+import project5 from '../../public/images/projects/proyecto-porellosezeiza.webp'
 import { motion } from "framer-motion";
 import TransitionEffect from "@/components/TransitionEffect";
 import { useIntl } from "react-intl";
@@ -75,7 +75,7 @@ const ProjectMin = ({ title, type, img, link, githubLink, btnSub }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <FramerImage src={img} alt={title} className="w-full h-auto" 
+        <FramerImage src={img} alt={title} className="w-full h-auto"  
         whileHover={{scale: 1.1}}
         transition={{duration: 0.3}}
         />
@@ -201,10 +201,10 @@ const Project = () => {
                 summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. 
                         It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your 
                         local currency."
-                link="https://portfolio-2023-nextjs.vercel.app/"
-                type="🚀Proximamente..."
+                link="https://porellosezeiza.vercel.app/"
+                type="⭐ React + TypesCript + MercadoPagoAPI + NodeJs ⭐"
                 img={project5}
-                githubLink="https://github.com/Leonardo-MT93/"
+                githubLink="https://github.com/Leonardo-MT93/pawsofhope"
                 btnSub={btnSub}
               />
             </div>
